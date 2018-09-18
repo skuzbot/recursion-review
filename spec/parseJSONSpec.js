@@ -6,9 +6,12 @@ describe('parseJSON', function() {
       var result = parseJSON(test);
       var expected = JSON.parse(test);
       var equality = _.isEqual(result, expected); // why can't we use `===` here?
+      console.log('result: ' + JSON.stringify(result) + ' expected: ' + JSON.stringify(expected));
       // Replace this line with an `expect` statement that tests
       // the behavior described by the `it` string
-      throw new Error('Test is missing.')
+      //expect(JSON.stringify(result)).to.equal(JSON.stringify(expected));
+      expect(equality).to.equal(true)
+      //throw new Error('Test is missing.')
     });
   });
 
